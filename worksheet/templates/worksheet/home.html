@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today's Worksheets</title>
+</head>
+<body>
+    <h1>Math Worksheets for {{ today|date:"d/m/Y" }}</h1>
+
+    {% if worksheets %}
+        <ul>
+            {% for worksheet in worksheets %}
+                <li>
+                    <strong>{{ worksheet.title }}</strong> –
+                    <a href="{{ worksheet.file.url }}">Download</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No worksheets uploaded yet for today.</p>
+    {% endif %}
+</body>
+</html>
+
