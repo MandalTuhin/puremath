@@ -7,7 +7,4 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: worksheet_site.settings
-      - key: PYTHON_VERSION
-        value: 3.10.12 #fixed the version.
-        
 
